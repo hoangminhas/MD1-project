@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Find leap year</title>
+</head>
+<body>
+<script>
+    let a = +prompt("Nhap nam", "");
+    if (a % 4 == 0) {
+        if (a % 100 == 0) {
+            if (a % 400 == 0) {
+                alert("Leap Year");
+            }
+            else {
+                alert("No Leap Year");
+            }
+        } else {
+            alert("Leap Year");
+        }
+    }   else {
+        alert("No leap Year");
+    }
+
+</script>
+</body>
+</html>
