@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tinh so ngay</title>
+</head>
+<body>
+<input type="text" name="month" id="month" placeholder="Nhap vao thang">
+<input type="button" value="Tinh so ngay" id="check">
+<h3 id="result"></h3>
+<script>
+    function compute() {
+        let input = document.getElementById('month').value;
+        switch (+input) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                document.getElementById('result').innerText = "Thang " + input + " co 31 ngay.";
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                document.getElementById('result').innerText = "Thang " + input + " co 30 ngay.";
+                break;
+            case 2:
+                document.getElementById('result').innerText = "Thang " + input + " co 28 hoac 29 ngay.";
+                break;
+            default:
+                document.getElementById('result').innerText = "Nhap sai thang.";
+                break;
+        }
+    }
+
+    document.getElementById('check').addEventListener("click", compute);
+</script>
+</body>
+</html>
