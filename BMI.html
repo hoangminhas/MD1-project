@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tinh chi so BMI</title>
+</head>
+<body>
+<h1>Tinh BMI let's go</h1>
+<label for="weight">Weight</label>
+<input type="number" name="weight" id="weight" placeholder="kg">
+<label for="height">Height</label>
+<input type="number" name="height" id="height" placeholder="m">
+<input type="button" value="Calculate" onclick="compute()">
+<h3 id="result">BMI: </h3>
+<h4 id="claim"></h4>
+<script>
+
+function compute() {
+    let weight = document.getElementById('weight').value;
+    let height = document.getElementById('height').value;
+    let bmi = +(weight) / (parseFloat(height) * parseFloat(height));
+    document.getElementById('result').innerText = "BMI: " + bmi;
+    if (bmi < 18)
+        document.getElementById('claim').innerText = "Underweight";
+    else if (bmi < 25.0)
+        document.getElementById('claim').innerText = "Normal";
+    else if (bmi < 30.0)
+        document.getElementById('claim').innerText = "Overweight";
+    else
+        document.getElementById('claim').innerText = "Obese";
+}
+
+
+</script>
+</body>
+</html>

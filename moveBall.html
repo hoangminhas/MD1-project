@@ -3,12 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title>Move the Ball</title>
+    <style>
+        img{
+            width: 300px;
+        }
+    </style>
 </head>
 <body>
 <form>
-    <img src="" alt="The Ball">
+    <img id="myImage" src="https://www.kindpng.com/picc/m/292-2924605_transparent-soccer-ball-clipart-no-background-soccer-ball.png" alt="The Ball">
+    <p>Click the button to move the fuckin ball</p>
+    <input type="button" onclick="moveRight()" value="Move">
 </form>
 <script>
+let imgObj = null;
+
+function start() {
+    imgObj = document.getElementById('myImage');
+    imgObj.style.position = 'relative';
+    imgObj.style.left = '0px';
+}
+
+function moveRight() {
+    imgObj.style.left = parseInt(imgObj.style.left) + 10 + 'px';
+}
+
+window.onload = start();
 
 </script>
 </body>

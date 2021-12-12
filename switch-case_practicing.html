@@ -22,7 +22,34 @@
             alert("We hope that this page look ok!");
     }
 
+    //Bai 2:
+    let a = +prompt("a?", "");
+    switch (a) {
+        case 0:
+            alert(0);
+            break;
+        case 1:
+            alert(1);
+            break;
+        case 2:
+        case 3:
+            alert('2, 3');
+            break;
+    }
 
+    //Bai 3:
+    let value = +prompt("Type a number", "");
+    switch ((value>0) ? 1 : (value == 0) ? 0 : -1) {
+        case 0:
+            alert("So nay bang 0");
+            break;
+        case 1:
+            alert("So nay lon hon 0");
+            break;
+        case -1:
+            alert("So nay be hon 0");
+            break;
+    }
 </script>
 </body>
 </html>
