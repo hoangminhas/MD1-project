@@ -46,8 +46,8 @@
     window.onload = init();
 
     function jump() {
-        nope.style.left = Math.random() * maxWidth + 'px';
-        nope.style.top = Math.random() * maxHeight + 'px';
+        nope.style.left = Math.floor(Math.random() * maxWidth) + 'px';
+        nope.style.top = Math.floor(Math.random() * maxHeight) + 'px';
     }
     nope.addEventListener('mouseover', jump);
 </script>
