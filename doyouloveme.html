@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Do you love me</title>
+    <style>
+        body {
+            font-family: "Apple Color Emoji";
+            text-align: center;
+            color: rebeccapurple;
+            background-image: url("https://3.bp.blogspot.com/-H-5FakTvNt4/W_DRVO56LMI/AAAAAAAAAOc/wwSrdE5VJbkzZU2knOBJLm5sv-4bSobOACHMYCw/s1600/the-beatles-cartoon-%25E2%259D%25A4-4k-hd-desktop-wallpaper-for-4k-ultra-hd-tv.jpg");
+        }
+        #yep {
+            position: absolute;
+            left: 550px;
+            height: 4em;
+            width: 7em;
+            border-radius: 15px;
+            color: lavenderblush;
+            background-color: #ff2d26;
+        }
+        #nope {
+            height: 4em;
+            width: 7em;
+            border-radius: 15px;
+            color: lavenderblush;
+            background-color: chocolate;
+        }
+
+    </style>
+</head>
+<body>
+<h1>Do you fvckin' luv me?</h1>
+<button id="yep" type="submit" onclick="alert('Nicetry')">Yep!</button>
+<button id="nope" type="submit" onclick="init()">Nope!</button>
+<script>
+    let nope = document.getElementById('nope');
+    let yep = document.getElementById('yep');
+    let maxHeight = window.innerHeight;
+    let maxWidth = window.innerWidth;
+
+    function init() {
+        nope.style.position = 'absolute';
+
+    }
+    window.onload = init();
+
+    function jump() {
+        nope.style.left = Math.random() * maxWidth + 'px';
+        nope.style.top = Math.random() * maxHeight + 'px';
+    }
+    nope.addEventListener('mouseover', jump);
+</script>
+</body>
+</html>
